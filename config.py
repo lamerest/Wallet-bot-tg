@@ -1,0 +1,5 @@
+BOT_TOKEN = "1658712359:AAFHMHShanlPkS3dpA7Y2Mdr49YLta7gqko"
+admin_id = "1198350276"
+start_message = "Hi!"
+SANDBOX_TOKEN = "t.mCKPoVp-iMf9ZMwHblmd3aqa5PA_2zo1O3-xM7WZPHoaH_tdTXxwMzq5TMM3peqQIEOLnZzuYPuc6zISrNrKeQ"
+TINKOFF_TOKEN = "t.oUylCGzLckM65rzLeOQnqLfYUE_rEwlY6wCbyqdzSgXp_hMl9HGbPEwZCWRxTe8-oCCCcqA1Nos-IN_QPdD-6A"

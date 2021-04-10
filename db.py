@@ -158,6 +158,7 @@ def last_date():
 def clear_month_expanses():
     db = sqlite3.connect("finance.db")
     cursor = db.cursor()
+
     cursor.execute("UPDATE category SET month_expanses = 0")
     db.commit()
     db.close()

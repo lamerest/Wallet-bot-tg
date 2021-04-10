@@ -89,7 +89,7 @@ async def budget_message(message):
     else:
         del_counter = number_of_operations()
     for i in last_operations():
-        date = "(" + str(i[4]).split(" ")[1] + "  " + str(i[4]).split(" ")[0] + ")"
+        date = "(" + str(i[4]).split(" ")[1] + "_" + str(i[4]).split(" ")[0] + ")"
         text += "/del" + str(del_counter) + "  " + str(i[1]) + "" + str(i[2]) + "  " + str(i[3]) + "  " + date + "\n\n"
         del_counter -= 1
     await bot.send_message(chat_id=message.from_user.id, text=text)

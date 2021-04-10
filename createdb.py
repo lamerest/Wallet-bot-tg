@@ -5,7 +5,7 @@ cursor = db.cursor()
 
 cursor.execute("CREATE TABLE IF NOT EXISTS budget("
                "total INT,"
-               "savings INT)")
+               "year_month date)")
 db.commit()
 
 cursor.execute("INSERT INTO budget VALUES(0, 0)")
@@ -20,7 +20,7 @@ cursor.execute("CREATE TABLE IF NOT EXISTS transactions("
 db.commit()
 
 cursor.execute("CREATE TABLE IF NOT EXISTS category("
-               "codename varchar(255) primary key,"
+               "codename varchar(255),"
                "name varchar(255),"
                "month_expanses INT, "
                "is_necessarily BOOL, "
@@ -36,4 +36,12 @@ categories = [("products", "Продукты", 0, True, "продукты, ед�
               ("other", "Другое", 0, False, "")]
 
 cursor.executemany("INSERT INTO category VALUES(?, ?, ?, ?, ?)", categories)
+db.commit()
+
+table = ""
+for category in categories:
+    table = table + category[0] + ", "
+table = table[0:len(table)-2]
+
+cursor.execute(f"CREATE TABLE IF NOT EXISTS months({table}, datetime varchar(255));")
 db.commit()

@@ -20,6 +20,10 @@ def auth(func):
     return wrapper
 
 
+async def send_to_admin(dp):
+    await bot.send_message(chat_id=admin_id, text="Bot started work...")
+
+
 @dp.message_handler(commands=["start", "help"])
 async def start(message: Message):
     # Just start message, nothing special

@@ -76,8 +76,9 @@ async def receiver(message: Message):
 
 async def budget_message(message):
     budget = check_budget()
-    text = "Бюджет составляет:\n\n" + str(budget[0]) + " ₽" + "\n\nВаш брокерский счёт (Tinkoff):\n\n" + str(
-        portfolio_balance()) + " ₽"
+    text = "Бюджет составляет:\n\n" + str(budget[0]) + " ₽"
+    # "\n\nВаш брокерский счёт (Tinkoff):\n\n" + str(
+    # portfolio_balance()) + " ₽"
     text += "\n\nПоследние операции:\n\n"
     if number_of_operations() >= 6:
         del_counter = 6

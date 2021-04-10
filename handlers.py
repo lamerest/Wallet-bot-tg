@@ -7,7 +7,7 @@ from business_logic import new_transaction, \
 
 from db import view_category_expanses, number_of_operations
 
-from tinkoff import portfolio_balance
+# from tinkoff import portfolio_balance
 
 
 def auth(func):

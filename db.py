@@ -162,11 +162,3 @@ def clear_month_expanses():
     cursor.execute("UPDATE category SET month_expanses = 0")
     db.commit()
     db.close()
-
-
-def clear_transactions():
-    db = sqlite3.connect("finance.db")
-    cursor = db.cursor()
-    cursor.execute("DELETE FROM transactions")
-    db.commit()
-    db.close()

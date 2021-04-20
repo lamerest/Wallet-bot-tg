@@ -3,7 +3,7 @@ from db import insert_transaction, delete_transaction, \
     last_6_transactions, select_transaction, \
     get_aliases, \
     check_category_expanses, update_category_expanse, view_category_expanses, \
-    insert_month_expanses, last_date, clear_month_expanses, clear_transactions
+    insert_month_expanses, last_date, clear_month_expanses
 import datetime
 
 
@@ -93,7 +93,6 @@ def check_date():
         data.append(last_operation_date)
         insert_month_expanses(data)
         clear_month_expanses()
-        clear_transactions()
 
 
 def parse_message(message) -> tuple:
